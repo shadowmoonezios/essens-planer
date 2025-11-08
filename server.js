@@ -9,6 +9,10 @@ app.use(express.json());
 mongoose.connect('mongodb://localhost:27017/essens-planer', {
   useNewUrlParser: true,
   useUnifiedTopology: true
+}).then(() => {
+  console.log('MongoDB verbunden');
+}).catch(err => {
+  console.error('MongoDB-Verbindung fehlgeschlagen:', err);
 });
 
 app.get('/', (req, res) => {
