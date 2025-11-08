@@ -12,7 +12,7 @@ mongoose.connect('mongodb://localhost:27017/essens-planer', {
 });
 
 app.get('/', (req, res) => {
-  res.send('Willkommen beim Essens Planer!');
+  res.send('Willkommen beim Essensplaner!');
 });
 
 const PORT = process.env.PORT || 5000;
